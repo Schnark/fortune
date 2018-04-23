@@ -1,0 +1,20 @@
+{
+	"@comment": "Note that the code to transform these data into a webpage is in https://github.com/Schnark/schnark.github.io",
+	"title": {
+		"en": "Fortune – App for Firefox OS",
+		"de": "Fortune – App für Firefox OS"
+	},
+	"serviceworker": true,
+	"icon": "res/icon-128.png",
+	"screenshots": [
+		"screenshot.png"
+	],
+	"desc": {
+		"en": ["This app displays random fortune cookies, like the program from UNIX systems."],
+		"de": ["Diese App zeigt zufällige Glückskeks-Texte an, wie das Programm von UNIX-Systemen."]
+	},
+	"restrictions": {
+		"en": "Note that automatic regular fortune cookies don’t work as well if you don’t use Firefox OS.",
+		"de": "Beachte, dass die automatischen regelmäßigen Glückskekse nicht so gut funktionieren, wenn du nicht Firefox OS verwendest."
+	}
+}

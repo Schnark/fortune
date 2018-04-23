@@ -1,0 +1,25 @@
+{
+	"version": "1.0",
+	"name": "Fortune",
+	"description": "Fortune cookies",
+	"launch_path": "/index.html",
+	"icons": {
+		"128": "/res/icon-128.png",
+		"512": "/res/icon-512.png"
+	},
+	"developer": {
+		"name": "Michael Müller",
+		"url": "https://github.com/Schnark"
+	},
+	"permissions": {
+		"alarms": {
+			"description": "Automatic updates"
+		},
+		"desktop-notification": {
+			"description": "Notification for auto updates"
+		}
+	},
+	"messages": [{
+		"alarm": "/index.html"
+	}]
+}

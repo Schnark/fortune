@@ -1,0 +1,99 @@
+html {
+	font-family: sans-serif;
+	max-width: 80em;
+	margin: auto;
+}
+
+#fortune {
+	line-height: 1.5;
+	max-width: 50em;
+}
+
+.indent-1 {
+	margin-left: 2em;
+}
+
+.indent-2,
+.indent-signature {
+	margin-left: 4em;
+}
+
+.indent-3 {
+	margin-left: 6em;
+}
+
+.indent-4 {
+	margin-left: 8em;
+}
+
+.indent-signature {
+	font-style: italic;
+}
+
+hr {
+	width: 20%;
+}
+
+#settings-list {
+	line-height: 2;
+	list-style: none;
+	max-width: 50em;
+	margin: 0.75em;
+	padding: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 7px;
+	padding: 8px;
+	margin: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	cursor: pointer;
+}
+
+select {
+	font: inherit;
+	display: block;
+	width: 100%;
+}
+
+#raw,
+#config {
+	display: none;
+}
+
+#raw:checked ~ nav label[for="raw"] svg,
+#config:checked ~ nav label[for="config"] svg {
+	fill: white;
+}
+
+#raw:checked ~ nav label[for="raw"],
+#config:checked ~ nav label[for="config"] {
+	background-color: black;
+}
+
+#fortune-raw,
+#settings {
+	display: none;
+}
+
+#raw:checked ~ #fortune-raw {
+	display: block;
+}
+
+#config:checked ~ #fortune-raw,
+#config:checked ~ #fortune,
+#raw:checked ~ #fortune {
+	display: none;
+}
+
+#config:checked ~ #settings {
+	display: block;
+}

@@ -1,0 +1,26 @@
+{
+	"version": "1.0",
+	"name": "Fortune",
+	"description": "Fortune cookies",
+	"size": 2264742,
+	"package_path": "https://schnark.github.io/fortune/fortune.zip",
+	"icons": {
+		"128": "/res/icon-128.png",
+		"512": "/res/icon-512.png"
+	},
+	"developer": {
+		"name": "Michael Müller",
+		"url": "https://github.com/Schnark"
+	},
+	"permissions": {
+		"alarms": {
+			"description": "Automatic updates"
+		},
+		"desktop-notification": {
+			"description": "Notification for auto updates"
+		}
+	},
+	"messages": [{
+		"alarm": "/index.html"
+	}]
+}

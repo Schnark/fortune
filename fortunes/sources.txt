@@ -1,0 +1,16 @@
+fortunes, fortunes2, fortunes-o, and fortunes2-o are from an old SUSE install, and come with the BSD 3 clause license. Also the following text applies:
+
+Warning:
+	The fortunes contained in the fortune database have been collected
+	haphazardly from a cacophony of sources, in number so huge it
+	boggles the mind.  It is impossible to do any meaningful quality
+	control on attributions, or lack thereof, or exactness of the quote.
+	Since this database is not used for profit, and since entire works
+	are not published, it falls under fair use, as we understand it.
+	However, if any half-assed idiot decides to make a profit off of
+	this, they will need to double check it all, and nobody not involved
+	of such an effort makes any warranty that anything in the database
+	bears any relation to the real world of literature, law, or other
+	bizzarrity.
+
+The other files are from https://github.com/316k/fortune.js (which probably are derived from a similar source).
