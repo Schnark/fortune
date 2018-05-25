@@ -2,7 +2,7 @@
 (function (worker) {
 "use strict";
 
-var VERSION = 'v1.0',
+var VERSION = 'v1.1',
 	FILES = [
 		'index.html',
 		'fortunes/art',
@@ -39,12 +39,15 @@ var VERSION = 'v1.0',
 		'fortunes/wisdom',
 		'fortunes/work',
 		'res/app.js',
+		'res/find.js',
 		'res/format.js',
 		'res/fortune.css',
 		'res/fortune.js',
 		'res/history.js',
+		'res/load.js',
 		'res/notification.js',
 		'res/random.js',
+		'res/search.js',
 		'res/settings.js'
 	];
 

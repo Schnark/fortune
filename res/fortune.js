@@ -270,19 +270,22 @@ var fortuneDatabase = [{
 	enabled: false
 }];
 
-function showFortune (fortune, lang) {
+function showFortune (fortune, lang, name) {
 	var raw = document.getElementById('fortune-raw'),
-		formatted = document.getElementById('fortune');
-	raw.innerHTML = fortune;
+		formatted = document.getElementById('fortune'),
+		source = document.getElementById('source');
+	raw.innerHTML = fortune.replace(/</g, '&lt;');
 	formatted.innerHTML = fortunes.format(fortune);
+	source.innerHTML = name;
 	raw.lang = lang;
 	formatted.lang = lang;
+	source.lang = lang;
 }
 
 function showRandomFortune (notification) {
-	fortunes.getRandom(function (fortune, lang) {
+	fortunes.getRandom(function (fortune, lang, name) {
 		var short;
-		fortunes.history.add(fortune, lang);
+		fortunes.history.add(fortune, lang, name);
 		if (notification) {
 			short = fortune.replace(/\s+/g, ' ');
 			if (short.length > 1024) {
@@ -290,7 +293,7 @@ function showRandomFortune (notification) {
 			}
 			fortunes.notification.show(short, lang);
 		}
-		showFortune(fortune, lang);
+		showFortune(fortune, lang, name);
 	});
 }
 

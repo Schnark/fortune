@@ -34,6 +34,11 @@ hr {
 	width: 20%;
 }
 
+#source {
+	float: right;
+	color: #555;
+}
+
 #settings-list {
 	line-height: 2;
 	list-style: none;
@@ -58,24 +63,28 @@ nav {
 	cursor: pointer;
 }
 
-select {
+select,
+#search-input {
 	font: inherit;
 	display: block;
 	width: 100%;
 }
 
 #raw,
-#config {
+#config,
+#search {
 	display: none;
 }
 
 #raw:checked ~ nav label[for="raw"] svg,
-#config:checked ~ nav label[for="config"] svg {
+#config:checked ~ nav label[for="config"] svg,
+#search:checked ~ nav label[for="search"] svg {
 	fill: white;
 }
 
 #raw:checked ~ nav label[for="raw"],
-#config:checked ~ nav label[for="config"] {
+#config:checked ~ nav label[for="config"],
+#search:checked ~ nav label[for="search"] {
 	background-color: black;
 }
 
@@ -96,4 +105,13 @@ select {
 
 #config:checked ~ #settings {
 	display: block;
+}
+
+#search:not(:checked) ~ nav #search-prev,
+#search:not(:checked) ~ nav #search-next,
+#search:not(:checked) ~ p #search-input,
+#search:checked ~ nav #new-fortune,
+#search:checked ~ nav #prev,
+#search:checked ~ nav #next {
+	display: none;
 }
