@@ -1,8 +1,8 @@
 {
-	"version": "1.1",
+	"version": "1.2",
 	"name": "Fortune",
 	"description": "Fortune cookies",
-	"size": 2266757,
+	"size": 2266783,
 	"package_path": "https://schnark.github.io/fortune/fortune.zip",
 	"icons": {
 		"128": "/res/icon-128.png",

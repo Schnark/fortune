@@ -89,27 +89,27 @@ select,
 }
 
 #fortune-raw,
-#settings {
+#settings,
+#search-input {
 	display: none;
 }
 
-#raw:checked ~ #fortune-raw {
+#raw:checked ~ #fortune-raw,
+#config:checked ~ #settings,
+#search:checked ~ p #search-input {
 	display: block;
 }
 
 #config:checked ~ #fortune-raw,
 #config:checked ~ #fortune,
+#config:checked ~ #source,
+#config:checked ~ p #search-input,
 #raw:checked ~ #fortune {
 	display: none;
 }
 
-#config:checked ~ #settings {
-	display: block;
-}
-
 #search:not(:checked) ~ nav #search-prev,
 #search:not(:checked) ~ nav #search-next,
-#search:not(:checked) ~ p #search-input,
 #search:checked ~ nav #new-fortune,
 #search:checked ~ nav #prev,
 #search:checked ~ nav #next {

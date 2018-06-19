@@ -20,21 +20,21 @@ var fortuneDatabase = [{
 	count: 11644,
 	enabled: true
 }, {
-	filename: 'fortunes/fortunes2-o',
-	name: 'fortunes2-o',
-	description: 'A traditional fortunes file with offensive fortune cookies.',
-	lang: 'en',
-	separator: '\n%\n',
-	count: 2371,
-	enabled: false
-}, {
 	filename: 'fortunes/fortunes-o',
 	name: 'fortunes-o',
-	description: 'Another traditional fortunes file with offensive fortune cookies.',
+	description: 'A traditional fortunes file with offensive fortune cookies.',
 	lang: 'en',
 	separator: '\n%\n',
 	rot13: true,
 	count: 392,
+	enabled: false
+}, {
+	filename: 'fortunes/fortunes2-o',
+	name: 'fortunes2-o',
+	description: 'Another traditional fortunes file with offensive fortune cookies.',
+	lang: 'en',
+	separator: '\n%\n',
+	count: 2371,
 	enabled: false
 }, {
 	filename: 'fortunes/art',

@@ -20,7 +20,7 @@ function formatFortune (fortune) {
 
 	lines = fortune.replace(/^\n+/, '').replace(/\n+$/g, '')
 		.replace(/\t/g, '        ') //TODO echte Tabs
-		.replace(/((?:_+\u0008+)+)(.*)/g, function (all, underline, rest) { //TODO rest nur so lang wie nötig
+		.replace(/((?:_+\u0008+)+)([^_\u0008]*)/g, function (all, underline, rest) {
 			return '<u>' + rest.slice(0, underline.length / 2) + '</u>' + rest.slice(underline.length / 2);
 		})
 		.split('\n')

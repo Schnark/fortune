@@ -39,7 +39,7 @@ function onUpdate () {
 	}
 	updateTimeout = setTimeout(function () {
 		onNewSearch(this.value);
-	}.bind(this), 500);
+	}.bind(this), 750);
 }
 
 return {

@@ -3,7 +3,7 @@ fortunes.findFortune =
 (function () {
 "use strict";
 
-var cache = {};
+var cache = {}, running = false;
 
 function normalize (text) {
 	return text.toLowerCase().replace(/\s+/g, ' ').replace(/[^a-z0-9 ]+/g, '').replace(/\s+/g, ' ');
@@ -37,6 +37,12 @@ function getSearchResults (i, needle, callback) {
 
 function find (index, needle, callback) {
 	var i, dir, dbs = [], foundAny = false;
+	if (running) {
+		setTimeout(function () {
+			find(index, needle, callback);
+		}, 100);
+		return;
+	}
 	needle = normalize(needle);
 	if (!needle) {
 		callback(false);
@@ -67,11 +73,13 @@ function find (index, needle, callback) {
 			if (dir > 0) {
 				if (index < results.length) {
 					fortunes.getFortune(dbs[i], results[index], callback);
+					running = false;
 					return;
 				}
 			} else {
 				if (results.length + index >= 0) {
 					fortunes.getFortune(dbs[i], results[results.length + index], callback);
+					running = false;
 					return;
 				}
 			}
@@ -82,6 +90,7 @@ function find (index, needle, callback) {
 					i = 0;
 					if (!foundAny) {
 						callback(false);
+						running = false;
 						return;
 					}
 				}
@@ -90,6 +99,7 @@ function find (index, needle, callback) {
 					i = dbs.length - 1;
 					if (!foundAny) {
 						callback(false);
+						running = false;
 						return;
 					}
 				}
@@ -98,6 +108,7 @@ function find (index, needle, callback) {
 		});
 	}
 
+	running = true;
 	recursiveFind();
 }
 
