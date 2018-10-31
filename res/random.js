@@ -11,7 +11,7 @@ function getRandomFortune (callback) {
 		}
 	}
 	if (c === 0) {
-		callback('This fortune cookie is empty.', 'en');
+		callback('This fortune cookie is empty.', 'en', '');
 		return;
 	}
 	c = Math.floor(Math.random() * c);
