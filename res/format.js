@@ -69,7 +69,7 @@ function formatFortune (fortune) {
 				res[1] = Math.min(res[1], lines[i].table[1]);
 			}
 		}
-		if (res[0] > res[1]) {
+		if (res[0] >= res[1]) {
 			for (i = 0; i < lines.length; i++) {
 				if (lines[i].type === 'table') {
 					lines[i].type = '';
@@ -85,9 +85,19 @@ function formatFortune (fortune) {
 					}
 				}
 			}
+			for (i = 1; i < lines.length - 1; i++) {
+				if (
+					lines[i].type === 'table' &&
+					lines[i - 1].type !== 'table' &&
+					lines[i + 1].type !== 'table'
+				) {
+					lines[i].type = '';
+				}
+			}
 			for (i = 1; i < lines.length; i++) {
 				if (
 					lines[i - 1].type === 'table' &&
+					!lines[i].signature &&
 					!lines[i].type &&
 					/^ *$/.test(lines[i].text.slice(res[0], res[1]))
 				) {

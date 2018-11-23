@@ -9,6 +9,10 @@ html {
 	max-width: 50em;
 }
 
+table td {
+	vertical-align: top;
+}
+
 .indent-1 {
 	margin-left: 2em;
 }
