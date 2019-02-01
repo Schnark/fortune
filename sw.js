@@ -2,7 +2,8 @@
 (function (worker) {
 "use strict";
 
-var VERSION = 'v1.4',
+var PREFIX = 'fortune',
+	VERSION = '1.5',
 	FILES = [
 		'index.html',
 		'fortunes/art',
@@ -53,7 +54,7 @@ var VERSION = 'v1.4',
 
 worker.addEventListener('install', function (e) {
 	e.waitUntil(
-		caches.open(VERSION).then(function (cache) {
+		caches.open(PREFIX + ':' + VERSION).then(function (cache) {
 			return cache.addAll(FILES);
 		})
 	);
@@ -63,7 +64,7 @@ worker.addEventListener('activate', function (e) {
 	e.waitUntil(
 		caches.keys().then(function (keys) {
 			return Promise.all(keys.map(function (key) {
-				if (key !== VERSION) {
+				if (key.indexOf(PREFIX + ':') === 0 && key !== PREFIX + ':' + VERSION) {
 					return caches.delete(key);
 				}
 			}));

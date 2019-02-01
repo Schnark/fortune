@@ -1,8 +1,8 @@
 {
-	"version": "1.4",
+	"version": "1.5",
 	"name": "Fortune",
 	"description": "Fortune cookies",
-	"size": 2267206,
+	"size": 2267236,
 	"package_path": "http://localhost:8080/fortune.zip",
 	"icons": {
 		"128": "/res/icon-128.png",

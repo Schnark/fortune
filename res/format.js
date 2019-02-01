@@ -85,6 +85,9 @@ function formatFortune (fortune) {
 					}
 				}
 			}
+			if (lines[0].type === 'table' && lines[1].type !== 'table') {
+				lines[0].type = '';
+			}
 			for (i = 1; i < lines.length - 1; i++) {
 				if (
 					lines[i].type === 'table' &&
@@ -93,6 +96,9 @@ function formatFortune (fortune) {
 				) {
 					lines[i].type = '';
 				}
+			}
+			if (lines[lines.length - 1].type === 'table' && lines[lines.length - 2].type !== 'table') {
+				lines[lines.length - 1].type = '';
 			}
 			for (i = 1; i < lines.length; i++) {
 				if (
