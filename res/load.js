@@ -29,7 +29,7 @@ function init (index, callback) {
 			text = rot13(text);
 		}
 		fortunes.database[index].fortunes = text.split(fortunes.database[index].separator).map(function (str) {
-			return str.trim();
+			return str.replace(/^\n+|\s+$/g, '');
 		}).filter(function (str) {
 			return str;
 		});

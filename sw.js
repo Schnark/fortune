@@ -3,7 +3,7 @@
 "use strict";
 
 var PREFIX = 'fortune',
-	VERSION = '1.5',
+	VERSION = '1.6',
 	FILES = [
 		'index.html',
 		'fortunes/art',
