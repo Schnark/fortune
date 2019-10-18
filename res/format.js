@@ -18,7 +18,7 @@ function htmlEscape (text) {
 function formatFortune (fortune) {
 	var lines, asciiArtRe, noContinue, signature, long, i, res, parindent, ignoreEmpty;
 
-	asciiArtRe = /\S {9,}|[^a-zA-Z0-9.:) ] {8}|[^a-zA-Z0-9.!? ]{5,}|[^a-zA-Z0-9 ]{9,}/;
+	asciiArtRe = /\S {17}|[^a-zA-Z0-9.:) ] {8}|[^a-zA-Z0-9.!? ]{5}|[^a-zA-Z0-9 ]{9}/;
 	noContinue = /^(?: +--| *\((?:.|\d+)\) | *\d+[.:)] |> |\w: )/;
 	signature = /^ +--/;
 	long = 60;
